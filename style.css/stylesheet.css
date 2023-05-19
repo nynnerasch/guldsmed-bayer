@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap");
+
+@import url("https://use.typekit.net/wbl1yqc.css");
+
+/* VARIABLES */
+
 :root {
   --background: #fdf3e9;
   --textcolor: #48322b;
@@ -5,4 +11,188 @@
   --purpleaccent: #441e74;
   --pricecolor: #a18a68;
   --textfields: #fef0f0;
+}
+
+body {
+  background-color: var(--background);
+  background-image: url("../assets/background-image.png");
+  background-repeat: repeat;
+  background-blend-mode: soft-light;
+  background-size: cover;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+
+.header {
+  background-color: var(--pinkaccent);
+  background-image: url(../assets/background-image.png);
+  background-blend-mode: soft-light;
+  background-size: cover;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 5rem;
+}
+
+.nav-link {
+  font-family: gelica, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 24px;
+  color: var(--textcolor);
+}
+
+.nav-link:hover {
+  color: var(--purpleaccent);
+}
+
+@media only screen and (min-width: 900px) {
+  .logo {
+    height: 100px;
+    width: auto;
+  }
+}
+
+/*BURGERMENU*/
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--textcolor);
+}
+
+/* BURGERMENU RESPONSIVE */
+@media only screen and (max-width: 900px) {
+  .nav-menu {
+    background-image: url(../assets/background-image.png);
+    background-blend-mode: soft-light;
+    background-size: cover;
+    border-top: 1px solid #441e74;
+    position: fixed;
+    left: -1000%;
+    top: 4.5rem;
+    flex-direction: column;
+    background-color: var(--pinkaccent);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-link {
+    font-size: 20px;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 2.5rem 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+/*HEROSECTION*/
+.herosection {
+  background-image: url("../assets/banner-mobil.png");
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 226.62px;
+  text-align: right;
+  color: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.herosection h1 {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: right;
+  padding: 10px;
+}
+
+.cta1 {
+  background-color: var(--pinkaccent);
+  color: var(--textcolor);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  box-shadow: 0px 4px 4px rgba(134, 151, 95, 0.31);
+  border-radius: 8px;
+  border: none;
+  padding: 12px 14px;
+  margin: 10px;
+}
+
+@media only screen and (min-width: 900px) {
+  .herosection {
+    background-image: url("../assets/banner.png");
+    width: 100vw;
+    height: 591px;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .herosection h1 {
+    font-size: 36px;
+    padding-right: 150px;
+  }
+  .cta1 {
+    margin-right: 150px;
+    font-size: 20px;
+  }
 }
