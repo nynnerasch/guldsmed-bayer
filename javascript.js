@@ -10,6 +10,8 @@ function mobileMenu() {
 
 const navLink = document.querySelectorAll(".nav-link");
 
+/* MAKE SURE BURGERMENU CLOSES WHEN CLICKING NAVIGATION LINK*/
+
 navLink.forEach((n) => n.addEventListener("click", closeMenu));
 
 function closeMenu() {
