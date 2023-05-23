@@ -7,6 +7,10 @@
     <title>Shop</title>
     <link rel="icon" type="image/x-icon" href="assets/no-type-logo-brun.svg" />
     <link rel="stylesheet" href="style.css/stylesheet.css" />
+    <script
+      src="https://kit.fontawesome.com/912afda4f7.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
@@ -39,7 +43,29 @@
         </nav>
       </header>
     </header>
-    <main></main>
+    <main id="shop-main">
+      <section class="filter">
+        <!--søgefelt-->
+        <div class="search__container">
+          <input class="search__input" type="text" placeholder="Søg..." />
+        </div>
+
+        <h1 id="filtrer">Filtrér</h1>
+        <nav class="categories">
+          <a href="shop.html?Category=all">Alle smykker</a>
+          <a href="shop.html?Category=Vedhæng">Vedhæng</a>
+          <a href="shop.html?Category=Ringe">Ringe</a>
+          <a href="shop.html?Category=Øreringe">Øreringe</a>
+          <a href="shop.html?Category=Armbånd">Armbånd</a>
+        </nav>
+      </section>
+      <!--PRODUCT TEMPLATE-->
+      <section class="products"></section>
+      <!--
+      <section class="dynamic_content">
+      </section>
+      -->
+    </main>
     <footer>
       <div id="kontakt">
         <h3>Kontakt mig!</h3>
