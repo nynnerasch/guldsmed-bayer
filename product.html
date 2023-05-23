@@ -39,7 +39,44 @@
         </nav>
       </header>
     </header>
-    <main></main>
+    <main>
+      <section class="product-page">
+        <div id="img-section">
+          <img
+            src="assets/cross-ring.png"
+            alt="Produkt billede"
+            class="product-img"
+          />
+        </div>
+        <div id="product-text-section">
+          <h1 class="product-name">Product name</h1>
+          <h3 class="product-price" id="price">Price</h3>
+          <p class="product-description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <div class="add-to-bag">
+            <div class="counter">
+              <span class="down" onClick="decreaseCount(event, this)">-</span>
+              <input type="text" id="antal" name="antal" value="1" />
+              <span class="up" onClick="increaseCount(event, this)">+</span>
+            </div>
+            <button>Tilføj til kurv</button>
+          </div>
+          <h2>Materiale</h2>
+          <select name="materialer" id="materialer" value="Vælg materiale">
+            <option value="Sølv">Sølv</option>
+            <option value="Guld">Guld</option>
+            <option value="Oxideret sølv" selected>Oxideret sølv</option>
+          </select>
+        </div>
+      </section>
+    </main>
     <footer>
       <div id="kontakt">
         <h3>Kontakt mig!</h3>
