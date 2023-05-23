@@ -27,6 +27,7 @@ function closeMenu() {
 }
 
 /* SHOP */
+
 function getCategories() {
   fetch(endpoint + "categories?parent=2")
     .then((res) => res.json())

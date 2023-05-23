@@ -540,6 +540,25 @@ select:focus {
 }
 
 /* SHOP PAGE */
+
+.smykker {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 20px;
+}
+
+.product-img-shop {
+  max-width: 100%;
+}
+
+@media only screen and (min-width: 1000px) {
+  .smykker {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* SHOP PAGE
 .categories {
   display: flex;
   justify-content: space-evenly;
@@ -574,6 +593,8 @@ select:focus {
     margin: 20px;
   }
 }
+
+*/
 
 /* search field */
 .search__container {
