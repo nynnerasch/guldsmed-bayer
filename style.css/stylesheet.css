@@ -558,6 +558,24 @@ select:focus {
   }
 }
 
+.categories {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+@media only screen and (min-width: 1000px) {
+  #shop-page {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+  }
+  .categories {
+    flex-direction: column;
+    gap: 2rem;
+    border-right: 1px solid var(--textcolor);
+  }
+}
+
 /* SHOP PAGE
 .categories {
   display: flex;
