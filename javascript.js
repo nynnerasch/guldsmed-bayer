@@ -38,7 +38,7 @@ function setupCategories(catArray) {
   const parentElement = document.querySelector("main");
   catArray.forEach((cat) => {
     const copy = template.cloneNode(true);
-    copy.querySelector("h2").textContent = cat.name;
+    copy.querySelector("h3").textContent = cat.name;
     parentElement.appendChild(copy);
   });
 }

@@ -39,14 +39,27 @@
         </nav>
       </header>
     </header>
-    http://guldsmedbayer.josefinemoerchh.com/wp-json/wp/v2/categories?parent=2
+    <!-- http://guldsmedbayer.josefinemoerchh.com/wp-json/wp/v2/categories?parent=2-->
     <template id="category-template">
       <h2></h2>
       <section class="collapsible"></section>
     </template>
     <main>
-      <h2>Shop alle</h2>
-      <h2>Øreringe</h2>
+      <section class="filter">
+        <!--søgefelt-->
+        <div class="search__container">
+          <input class="search__input" type="text" placeholder="Søg..." />
+        </div>
+
+        <h1 id="filtrer">Filtrér</h1>
+        <nav class="categories">
+          <h3>Alle smykker</h3>
+          <h3>Vedhæng</h3>
+          <h3>Ringe</h3>
+          <h3>Øreringe</h3>
+          <h3>Armbånd</h3>
+        </nav>
+      </section>
     </main>
     <footer>
       <div id="kontakt">
