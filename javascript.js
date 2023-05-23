@@ -1,3 +1,10 @@
+window.addEventListener("load", setup);
+const endpoint = "http://guldsmedbayer.josefinemoerchh.com/wp-json/wp/v2/";
+
+function setup() {
+  getCategories();
+}
+
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
@@ -19,6 +26,19 @@ function closeMenu() {
   navMenu.classList.remove("active");
 }
 
-/*SHOP PAGE DYNAMIC
+/* SHOP */
+function getCategories() {
+  fetch(endpoint + "categories?parent=2")
+    .then((res) => res.json())
+    .then(setupCategories);
+}
 
-/* INDIVIDUAL PRODUCT DYNAMIC*/
+function setupCategories(catArray) {
+  const template = document.querySelector("templatecategorytemplate").Content;
+  const parentElement = document.querySelector("main");
+  catArray.forEach((cat) => {
+    const copy = template.cloneNode(true);
+    copy.querySelector("h3").textContent = cat.name;
+    parentElement.appendChild(copy);
+  });
+}
