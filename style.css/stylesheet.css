@@ -237,6 +237,7 @@ button:hover {
   font-weight: 500;
   text-align: right;
   padding: 10px;
+  color: var(--background);
 }
 
 .cta1 {
@@ -331,8 +332,8 @@ button:hover {
   overflow: scroll;
 }
 
-#price {
-  color: var(--pricecolor) !important;
+.price {
+  color: var(--pricecolor);
   margin-top: 5px;
 }
 
@@ -544,6 +545,11 @@ select:focus {
   border-bottom: 1px solid var(--textcolor);
 }
 
+#shop-template {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .search__container {
   margin-left: 20px;
 }
@@ -571,7 +577,7 @@ select:focus {
   margin: 20px;
 }
 
-.category-template {
+#category-template {
   display: flex;
   justify-content: space-between;
   margin: 20px;
@@ -587,7 +593,7 @@ select:focus {
     gap: 2rem;
   }
 
-  .category-template {
+  #category-template {
     flex-direction: column;
     gap: 2rem;
   }
@@ -595,6 +601,12 @@ select:focus {
   .filter {
     border-right: 1px solid var(--textcolor);
     border-bottom: 0px solid var(--background);
+  }
+
+  .shop-main {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    margin-top: 50px;
   }
 }
 

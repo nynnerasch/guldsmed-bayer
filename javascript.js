@@ -1,9 +1,4 @@
 window.addEventListener("load", setup);
-const endpoint = "http://guldsmedbayer.josefinemoerchh.com/wp-json/wp/v2/";
-
-function setup() {
-  getCategories();
-}
 
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
@@ -27,6 +22,11 @@ function closeMenu() {
 }
 
 /* SHOP */
+const endpoint = "http://guldsmedbayer.josefinemoerchh.com/wp-json/wp/v2/";
+
+function setup() {
+  getCategories();
+}
 
 function getCategories() {
   fetch(endpoint + "categories?parent=2&_fields.name")
@@ -39,6 +39,17 @@ function getTheSmykker() {
   )
     .then((res) => res.json())
     .then(setupSmykker);
+}
+
+function setupCategories(catArray) {
+  const template = document.querySelector("template#category-template").content;
+  const parentElement = document.querySelector(".shop-page main");
+  catArray.forEach((cat) => {
+    const copy = template.cloneNode(true);
+    copy.querySelector("h2").textContent = cat.name;
+    parentElement.appendChild(copy);
+  });
+  getTheSmykker();
 }
 
 function setupSmykker(smykkeArray) {
@@ -59,15 +70,4 @@ function setupSmykker(smykkeArray) {
     copy.querySelector("h3.price").textContent = `${smykke.price}`;
     parentElement.appendChild(copy);
   });
-}
-
-function setupCategories(catArray) {
-  const template = document.querySelector("template#category-template").content;
-  const parentElement = document.querySelector("main");
-  catArray.forEach((cat) => {
-    const copy = template.cloneNode(true);
-    copy.querySelector("h2").textContent = cat.name;
-    parentElement.appendChild(copy);
-  });
-  getTheSmykker();
 }
