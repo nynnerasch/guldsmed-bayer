@@ -540,6 +540,13 @@ select:focus {
 }
 
 /* SHOP PAGE */
+.filter {
+  border-bottom: 1px solid var(--textcolor);
+}
+
+.search__container {
+  margin-left: 20px;
+}
 
 .smykker {
   display: grid;
@@ -564,6 +571,12 @@ select:focus {
   margin: 20px;
 }
 
+.category-template {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
 @media only screen and (min-width: 1000px) {
   #shop-page {
     display: grid;
@@ -572,8 +585,21 @@ select:focus {
   .categories {
     flex-direction: column;
     gap: 2rem;
-    border-right: 1px solid var(--textcolor);
   }
+
+  .category-template {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .filter {
+    border-right: 1px solid var(--textcolor);
+    border-bottom: 0px solid var(--background);
+  }
+}
+
+.filter h1 {
+  margin-left: 20px;
 }
 
 /* SHOP PAGE

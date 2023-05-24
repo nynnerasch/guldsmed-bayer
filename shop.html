@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
+  <body class="shop-page">
     <header>
       <header class="header">
         <nav class="navbar">
@@ -45,7 +45,23 @@
     </header>
     <!-- http://guldsmedbayer.josefinemoerchh.com/wp-json/wp/v2/categories?parent=2-->
 
-    <main id="shop-page">
+    <template id="category-template">
+      <div class="categories">
+        <h2>-</h2>
+      </div>
+    </template>
+    <template id="smykke-template">
+      <article class="smykke">
+        <img
+          src="assets/cross-ring.png"
+          alt="produkt"
+          class="product-img-shop"
+        />
+        <h3>Herrering i sølv</h3>
+        <h3 class="price">1000 <span>,-</span></h3>
+      </article>
+    </template>
+    <main>
       <section class="filter">
         <!--søgefelt-->
         <div class="search__container">
@@ -53,16 +69,18 @@
         </div>
 
         <h1 id="filtrer">Filtrér</h1>
+        <!--
         <div class="categories">
-          <h3>Alle smykker</h3>
-          <h3>Vedhæng</h3>
-          <h3>Ringe</h3>
-          <h3>Øreringe</h3>
-          <h3>Armbånd</h3>
+          <h2>Alle smykker</h2>
+          <h2>Vedhæng</h2>
+          <h2>Ringe</h2>
+          <h2>Øreringe</h2>
+          <h2>Armbånd</h2>
         </div>
+        -->
       </section>
-
-      <div class="smykker">
+      <!--
+        <section class="smykker">
         <article class="smykke">
           <img
             src="assets/cross-ring.png"
@@ -99,8 +117,8 @@
           <h3>Herrering i sølv</h3>
           <h3 class="price">1000 <span>,-</span></h3>
         </article>
-      </div>
-    </main>
+    </section>
+    --></main>
     <footer>
       <div id="kontakt">
         <h3>Kontakt mig!</h3>
