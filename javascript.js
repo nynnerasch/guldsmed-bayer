@@ -51,7 +51,12 @@ function setupSmykker(smykkeArray) {
       smykke._embedded[
         "wp:featuredmedia"
       ][0].media_details.sizes.full.source_url;
+    console.log(
+      smykke._embedded["wp:featuredmedia"][0].media_details.sizes.full
+        .source_url
+    );
     copy.querySelector("h3").textContent = `${smykke.title.rendered}`;
+    copy.querySelector("h3.price").textContent = `${smykke.price}`;
     parentElement.appendChild(copy);
   });
 }
