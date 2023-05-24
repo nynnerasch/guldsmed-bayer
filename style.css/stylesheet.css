@@ -292,6 +292,7 @@ button:hover {
 /*FOREVER COLLECTION FRONT PAGE*/
 .forever-collection {
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .forever-collection h3 {
@@ -342,6 +343,7 @@ button:hover {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    margin-bottom: 70px;
   }
   .forever-text {
     max-width: 25%;
