@@ -34,19 +34,26 @@ function getCategories() {
     .then(setupCategories);
 }
 function getTheSmykker() {
-  fetch(
-    "http://guldsmedbayer.josefinemoerchh.com/wp-json/wp/v2/smykke?per_page=100&_embed"
-  )
+  const searchParams = new URLSearchParams(window.location.search);
+  const id = searchParams.get("id");
+  let endpoint =
+    "http://guldsmedbayer.josefinemoerchh.com/wp-json/wp/v2/smykke?per_page=100&_embed";
+  if (id) {
+    endpoint = endpoint + "&categories[]=" + id;
+  }
+  fetch(endpoint)
     .then((res) => res.json())
     .then(setupSmykker);
 }
 
 function setupCategories(catArray) {
   const template = document.querySelector("template#category-template").content;
-  const parentElement = document.querySelector(".shop-page main");
+  const parentElement = document.querySelector(".shop-page main .categories");
   catArray.forEach((cat) => {
     const copy = template.cloneNode(true);
-    copy.querySelector("h2").textContent = cat.name;
+    copy.querySelector("a").textContent = cat.name;
+    copy.querySelector("a").href = "?id=" + cat.id;
+
     parentElement.appendChild(copy);
   });
   getTheSmykker();
@@ -55,7 +62,9 @@ function setupCategories(catArray) {
 function setupSmykker(smykkeArray) {
   console.log(smykkeArray);
   const template = document.querySelector("template#smykke-template").content;
-  const parentElement = document.querySelector(".shop-page main section");
+  const parentElement = document.querySelector(
+    ".shop-page main section.smykker"
+  );
   smykkeArray.forEach((smykke) => {
     const copy = template.cloneNode(true);
     copy.querySelector("img").src =
