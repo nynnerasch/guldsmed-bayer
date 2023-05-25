@@ -32,7 +32,7 @@ a {
   font-family: "Ubuntu", sans-serif;
 }
 
-a:hover {
+header a:hover {
   color: var(--purpleaccent);
   text-decoration: underline;
   text-underline-offset: 7px;
@@ -547,6 +547,20 @@ select:focus {
   border-bottom: 1px solid var(--textcolor);
 }
 
+.categories h2:hover {
+  text-decoration: underline;
+  text-underline-offset: 7px;
+}
+
+.product-name-shop {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.product-name-shop:hover {
+  text-decoration: underline;
+}
+
 #shop-template {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -565,6 +579,7 @@ select:focus {
 
 .product-img-shop {
   max-width: 100%;
+  border-radius: 8px;
 }
 
 @media only screen and (min-width: 1000px) {
