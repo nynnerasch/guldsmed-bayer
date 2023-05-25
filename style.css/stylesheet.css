@@ -551,6 +551,13 @@ select:focus {
 }
 
 /* SHOP PAGE */
+.shop-page .price::after {
+  content: ",00 DKK";
+}
+
+.shop-page .price {
+  margin-bottom: 20px;
+}
 .filter {
   border-bottom: 1px solid var(--textcolor);
 }
@@ -590,12 +597,6 @@ select:focus {
   border-radius: 8px;
 }
 
-@media only screen and (min-width: 1000px) {
-  .smykker {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 .categories {
   display: flex;
   justify-content: space-between;
@@ -609,6 +610,14 @@ select:focus {
 }
 
 @media only screen and (min-width: 1000px) {
+  .search__container {
+    margin-left: 10px;
+  }
+  .smykker {
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+  }
+
   #shop-page {
     display: grid;
     grid-template-columns: 0.2fr 1fr;
@@ -680,7 +689,7 @@ select:focus {
 /* search field */
 .search__container {
   margin: 20px;
-  margin-left: 0;
+  margin-left: 20px;
 }
 
 .search__input {
