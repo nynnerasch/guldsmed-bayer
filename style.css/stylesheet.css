@@ -447,6 +447,14 @@ footer p {
   max-width: 80%;
 }
 
+.product-price {
+  color: var(--pricecolor);
+}
+
+.product-price::after {
+  content: ",00 DKK";
+}
+
 .product-name,
 .product-price,
 .product-description {
