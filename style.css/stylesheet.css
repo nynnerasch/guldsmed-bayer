@@ -708,3 +708,46 @@ select:focus {
     font-size: 16px;
   }
 }
+
+/* OM MIG */
+.om-mig-page h1 {
+  text-align: center;
+  padding: 20px;
+}
+
+.om-mig-text h3,
+h2,
+p {
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media only screen and (min-width: 700px) {
+  .om-mig-text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+  .om-mig,
+  .speciale {
+    margin: 50px;
+  }
+  .om-mig-text h3,
+  h2,
+  p {
+    padding-left: none;
+    padding-right: none;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .om-mig-text {
+    grid-gap: 100px;
+  }
+}
+
+.allan-om-mig-img {
+  max-width: 100%;
+  margin-top: 20px;
+}
