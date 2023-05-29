@@ -462,6 +462,11 @@ footer p {
   margin-bottom: 10px;
 }
 
+.product-name,
+.product-price {
+  margin-left: 10px;
+}
+
 @media only screen and (min-width: 700px) {
   .product-page {
     display: grid;
@@ -548,6 +553,7 @@ select:focus {
 
 #materialer {
   margin-top: 20px;
+  margin-left: 10px;
 }
 
 /* SHOP PAGE */
@@ -744,6 +750,10 @@ p {
 @media only screen and (min-width: 1000px) {
   .om-mig-text {
     grid-gap: 100px;
+  }
+
+  .om-mig-page h1 {
+    padding: 40px;
   }
 }
 
