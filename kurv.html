@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Din kurv</title>
+    <link rel="icon" type="image/x-icon" href="assets/no-type-logo-brun.svg" />
+    <link rel="stylesheet" href="style.css/stylesheet.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <a href="#" class="nav-logo">
+          <img src="assets/logo-brun.svg" alt="logo" class="logo"
+        /></a>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="shop.html" class="nav-link">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a href="design.html" class="nav-link">Design dit eget smykke</a>
+          </li>
+          <li class="nav-item">
+            <a href="om.html" class="nav-link">Om mig</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"
+              ><img src="assets/kurv.png" alt="kurv" class="kurv"
+            /></a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+    <main class="kurv-main">
+      <h1>Din kurv</h1>
+      <a href="shop.html" id="shop-videre">Shop videre</a>
+
+      <section class="produkt-i-kurv">
+        <div id="top-sektion-kurv">
+          <h3>Produkter</h3>
+          <h3>Total</h3>
+        </div>
+        <div class="produkt-styling-kurv">
+          <img
+            src="assets/stars.png"
+            alt="produktbillede"
+            class="produkt-img-kurv"
+          />
+          <div id="produkt-info-kurv">
+            <h3>Stjerneskud ørestikker</h3>
+            <p class="price">800,00 DKK</p>
+            <div class="counter">
+              <span class="down" onClick="decreaseCount(event, this)">-</span>
+              <input type="text" id="antal" name="antal" value="1" />
+              <span class="up" onClick="increaseCount(event, this)">+</span>
+            </div>
+          </div>
+          <div id="total-og-fjern">
+            <h3 class="price-total">800,00 DKK</h3>
+            <p id="remove-from-kurv">Fjern</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div id="kontakt">
+        <h3>Kontakt mig!</h3>
+        <p><b>Telefon:</b> 21 27 25 74</p>
+        <p><b>E-mail:</b> guldsmedbayer@guldsmedbayer.dk</p>
+        <p><b>Adresse:</b> Godthåbsvej 25, st. tv. <br />2000 Frederiksberg</p>
+      </div>
+      <div>
+        <img src="assets/logo-purple.svg" alt="logo" class="footer-logo" />
+      </div>
+      <div id="åbningstider">
+        <h3>Åbningtider</h3>
+        <p><b>Søndag - Tirsdag:</b> Lukket</p>
+        <p><b>Onsdag - Fredag</b> 12:00 - 17:30</p>
+        <p><b>Lørdag:</b> 11:00 - 14:00</p>
+      </div>
+    </footer>
+    <script src="javascript.js"></script>
+    <script src="product.js"></script>
+  </body>
+</html>

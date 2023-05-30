@@ -41,3 +41,9 @@ function decreaseCount(a, b) {
     input.value = value;
   }
 }
+
+// TILFØJETT TIL KURV
+
+function vis() {
+  alert("Godt valg! Smykket er blevet tilføjet til kurven");
+}
