@@ -25,7 +25,7 @@
             <a href="om.html" class="nav-link">Om mig</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link"
+            <a href="kurv.html" class="nav-link"
               ><img src="assets/kurv.png" alt="kurv" class="kurv"
             /></a>
           </li>
@@ -55,6 +55,7 @@
           <div id="produkt-info-kurv">
             <h3>Stjerneskud ørestikker</h3>
             <p class="price">800,00 DKK</p>
+            <p>Antal:</p>
             <div class="counter">
               <span class="down" onClick="decreaseCount(event, this)">-</span>
               <input type="text" id="antal" name="antal" value="1" />
@@ -65,6 +66,21 @@
             <h3 class="price-total">800,00 DKK</h3>
             <p id="remove-from-kurv">Fjern</p>
           </div>
+        </div>
+      </section>
+      <section class="under-produkt-kurv">
+        <div id="tekstfelt-kurv">
+          <h3>Kommentar til ordren</h3>
+          <form>
+            <textarea>
+Skriv her, hvis du har en kommentar til din ordre.</textarea
+            >
+          </form>
+        </div>
+        <div>
+          <h3>Subtotal: 800,00 DKK</h3>
+          <p>Moms er inkluderet og fragt beregnes ved betaling</p>
+          <button>Fortsæt til levering</button>
         </div>
       </section>
     </main>

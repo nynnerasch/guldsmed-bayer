@@ -766,6 +766,7 @@ select:focus {
 /* ------ KURV ------ */
 .kurv-main h1 {
   text-align: center;
+  margin-top: 20px;
 }
 
 #shop-videre {
@@ -786,7 +787,7 @@ select:focus {
   justify-content: space-between;
   margin: 10px;
   padding-bottom: 10px;
-  border-bottom: 2px solid var(--purpleaccent);
+  border-bottom: 2px solid var(--pinkaccent);
 }
 
 .produkt-styling-kurv {
@@ -794,7 +795,7 @@ select:focus {
   justify-content: space-between;
   padding-bottom: 10px;
   margin: 10px;
-  border-bottom: 2px solid var(--purpleaccent);
+  border-bottom: 2px solid var(--pinkaccent);
 }
 
 .produkt-img-kurv {
@@ -805,6 +806,37 @@ select:focus {
 
 #produkt-info-kurv {
   margin: 10px;
+}
+
+.under-produkt-kurv {
+  margin: 10px;
+}
+
+.under-produkt-kurv button {
+  margin-top: 10px;
+}
+
+.kurv-main textarea {
+  font-family: "Ubuntu", sans-serif;
+  color: var(--textcolor);
+  width: 70%;
+  height: 100px;
+  background-color: var(--textfields);
+  border-radius: 8px;
+  border: 1px solid var(--textcolor);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  opacity: 70%;
+}
+
+@media only screen and (min-width: 1000px) {
+  #produkt-info-kurv h3 {
+    padding-bottom: 20px;
+  }
+  #produkt-info-kurv p {
+    padding-bottom: 20px;
+  }
 }
 
 .price-total {
