@@ -434,7 +434,7 @@ footer p {
 }
 
 /* INDIVIDUAL PRODUCT */
-/*TILFØJET TIL KURV FUNKTION*/
+/*TILFØJET TIL KURV FUNKTION
 #added {
   text-align: center;
   background-color: var(--purpleaccent);
@@ -456,6 +456,7 @@ footer p {
   text-decoration: underline;
   text-underline-offset: 7px;
 }
+*/
 
 .product-img {
   margin-right: auto;
@@ -487,7 +488,9 @@ footer p {
 }
 
 .product-name,
-.product-price {
+.product-price,
+.product-description,
+.materiale-h2 {
   margin-left: 10px;
 }
 
@@ -580,7 +583,9 @@ select:focus {
   margin-left: 10px;
 }
 
-/* ------ SHOP PAGE ------  */
+/* ------ 
+SHOP PAGE
+ ------  */
 .shop-page .price::after {
   content: ",00 DKK";
 }
@@ -701,7 +706,9 @@ select:focus {
   }
 }
 
-/* OM MIG */
+/* ------------ 
+OM MIG
+ -------------- */
 .om-mig-page h1 {
   text-align: center;
   padding: 20px;
