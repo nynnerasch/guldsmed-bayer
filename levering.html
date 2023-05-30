@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Guldsmed Allan Bayer</title>
+    <title>Levering</title>
     <link rel="icon" type="image/x-icon" href="assets/no-type-logo-brun.svg" />
     <link rel="stylesheet" href="style.css/stylesheet.css" />
   </head>
@@ -37,63 +37,65 @@
         </div>
       </nav>
     </header>
-    <main>
-      <section class="herosection">
-        <div class="hero-content">
-          <h1>
-            Håndlavede, unikke &<br />
-            personlige smykker<br />
-            med sjæl
-          </h1>
-          <a href="design.html"
-            ><button class="cta1">Design dit eget smykke!</button></a
-          >
+    <main class="levering-main">
+      <div id="ordre-total">
+        <h3>Ordre total:</h3>
+        <h3 class="price">800,00 DKK</h3>
+      </div>
+      <div class="breadcrumbs">
+        <p>Kurv > <b>Levering</b> > Betaling</p>
+      </div>
+      <section class="form-levering">
+        <h2>Kontaktinformation</h2>
+        <form>
+          <label for="email">E-mail</label>
+          <input type="text" id="email" name="email" />
+        </form>
+        <h2>Leveringsadresse</h2>
+        <div id="vælg-land">
+          <label for="land">Land</label>
+          <select id="land" name="land">
+            <option value="danmark">Danmark</option>
+            <option value="sverige">Sverige</option>
+            <option value="bosnien">Bosnien</option>
+          </select>
         </div>
-      </section>
-      <section class="forever-collection">
-        <div class="forever-text">
-          <h1>Forevigt kollektionen</h1>
-          <p>
-            Jeg specialiserer mig i modellering i voks. Jeg udfører nogle meget
-            detaljerede, livagtige og organiske smykker i voks, som man så kan
-            støbe i ædelmetal. Disse smykker er altid klar til bestilling.
-          </p>
-          <a href="shop.html"><button>Shop nu</button></a>
+
+        <form>
+          <label for="fname">Navn</label>
+          <input type="text" id="fname" name="fname" />
+        </form>
+        <form>
+          <label for="lname">Efternavn</label>
+          <input type="text" id="lname" name="lname" />
+        </form>
+        <form>
+          <label for="firma">Firma (valgfri)</label>
+          <input type="text" id="firma" name="firma" />
+        </form>
+        <form>
+          <label for="adresse">Adresse</label>
+          <input type="text" id="adresse" name="adresse" />
+        </form>
+        <form>
+          <label for="etage">Lejlighed/etage (valgfri)</label>
+          <input type="text" id="etage" name="etage" />
+        </form>
+        <form>
+          <label for="Post">Postnummer</label>
+          <input type="text" id="post" name="post" />
+        </form>
+        <form>
+          <label for="by">By</label>
+          <input type="text" id="by" name="by" />
+        </form>
+        <form>
+          <label for="tlf">Telefon nr.</label>
+          <input type="text" id="tlf" name="tlf" />
+        </form>
+        <div class="levering-knap">
+          <button>Fortsæt til betaling</button>
         </div>
-        <div class="three-products">
-          <div class="product-frontpage">
-            <img
-              src="assets/guldsmed-sort.png"
-              alt="product image"
-              class="product-img-frontpage"
-            />
-            <h3>Guldsmed i oxideret sølv</h3>
-            <h3 class="price">500 dkk</h3>
-          </div>
-          <div class="product-frontpage">
-            <img
-              src="assets/cross-ring.png"
-              alt="product image"
-              class="product-img-frontpage"
-            />
-            <h3>Sølv herrering med udskæring</h3>
-            <h3 class="price">1000 dkk</h3>
-          </div>
-          <div class="product-frontpage">
-            <img
-              src="assets/stars.png"
-              alt="product image"
-              class="product-img-frontpage"
-            />
-            <h3>Stjerneskud øreringe i guld</h3>
-            <h3 class="price">1500 dkk</h3>
-          </div>
-        </div>
-      </section>
-      <section>
-        <video width="100%" height="auto" autoplay muted loop>
-          <source src="assets/guldsmed-video.mp4" type="video/mp4" />
-        </video>
       </section>
     </main>
     <footer>

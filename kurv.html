@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Guldsmed Allan Bayer</title>
+    <title>Din kurv</title>
     <link rel="icon" type="image/x-icon" href="assets/no-type-logo-brun.svg" />
     <link rel="stylesheet" href="style.css/stylesheet.css" />
   </head>
@@ -37,63 +37,51 @@
         </div>
       </nav>
     </header>
-    <main>
-      <section class="herosection">
-        <div class="hero-content">
-          <h1>
-            Håndlavede, unikke &<br />
-            personlige smykker<br />
-            med sjæl
-          </h1>
-          <a href="design.html"
-            ><button class="cta1">Design dit eget smykke!</button></a
-          >
+    <main class="kurv-main">
+      <h1>Din kurv</h1>
+      <a href="shop.html" id="shop-videre">Shop videre</a>
+
+      <section class="produkt-i-kurv">
+        <div id="top-sektion-kurv">
+          <h3>Produkter</h3>
+          <h3>Total</h3>
         </div>
-      </section>
-      <section class="forever-collection">
-        <div class="forever-text">
-          <h1>Forevigt kollektionen</h1>
-          <p>
-            Jeg specialiserer mig i modellering i voks. Jeg udfører nogle meget
-            detaljerede, livagtige og organiske smykker i voks, som man så kan
-            støbe i ædelmetal. Disse smykker er altid klar til bestilling.
-          </p>
-          <a href="shop.html"><button>Shop nu</button></a>
-        </div>
-        <div class="three-products">
-          <div class="product-frontpage">
-            <img
-              src="assets/guldsmed-sort.png"
-              alt="product image"
-              class="product-img-frontpage"
-            />
-            <h3>Guldsmed i oxideret sølv</h3>
-            <h3 class="price">500 dkk</h3>
+        <div class="produkt-styling-kurv">
+          <img
+            src="assets/stars.png"
+            alt="produktbillede"
+            class="produkt-img-kurv"
+          />
+          <div id="produkt-info-kurv">
+            <h3>Stjerneskud ørestikker</h3>
+            <p class="price">800,00 DKK</p>
+            <p>Antal:</p>
+            <div class="counter">
+              <span class="down" onClick="decreaseCount(event, this)">-</span>
+              <input type="text" id="antal" name="antal" value="1" />
+              <span class="up" onClick="increaseCount(event, this)">+</span>
+            </div>
           </div>
-          <div class="product-frontpage">
-            <img
-              src="assets/cross-ring.png"
-              alt="product image"
-              class="product-img-frontpage"
-            />
-            <h3>Sølv herrering med udskæring</h3>
-            <h3 class="price">1000 dkk</h3>
-          </div>
-          <div class="product-frontpage">
-            <img
-              src="assets/stars.png"
-              alt="product image"
-              class="product-img-frontpage"
-            />
-            <h3>Stjerneskud øreringe i guld</h3>
-            <h3 class="price">1500 dkk</h3>
+          <div id="total-og-fjern">
+            <h3 class="price-total">800,00 DKK</h3>
+            <p id="remove-from-kurv">Fjern</p>
           </div>
         </div>
       </section>
-      <section>
-        <video width="100%" height="auto" autoplay muted loop>
-          <source src="assets/guldsmed-video.mp4" type="video/mp4" />
-        </video>
+      <section class="under-produkt-kurv">
+        <div id="tekstfelt-kurv">
+          <h3>Kommentar til ordren</h3>
+          <form>
+            <textarea>
+Skriv her, hvis du har en kommentar til din ordre.</textarea
+            >
+          </form>
+        </div>
+        <div>
+          <h3>Subtotal: 800,00 DKK</h3>
+          <p>Moms er inkluderet og fragt beregnes ved betaling</p>
+          <a href="levering.html"><button>Fortsæt til levering</button></a>
+        </div>
       </section>
     </main>
     <footer>
@@ -114,5 +102,6 @@
       </div>
     </footer>
     <script src="javascript.js"></script>
+    <script src="product.js"></script>
   </body>
 </html>

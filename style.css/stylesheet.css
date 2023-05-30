@@ -107,6 +107,7 @@ button {
 button:hover {
   background-color: var(--purpleaccent);
   color: var(--background);
+  cursor: pointer;
 }
 
 /* HEADER */
@@ -433,6 +434,29 @@ footer p {
 }
 
 /* INDIVIDUAL PRODUCT */
+/*TILFØJET TIL KURV FUNKTION*/
+#added {
+  text-align: center;
+  background-color: var(--purpleaccent);
+  padding: 20px;
+  display: none;
+}
+
+#added::after {
+  display: block;
+}
+
+#added h2 {
+  color: var(--background);
+  margin-bottom: 15px;
+}
+
+#added a {
+  color: var(--background);
+  text-decoration: underline;
+  text-underline-offset: 7px;
+}
+
 .product-img {
   margin-right: auto;
   margin-left: auto;
@@ -654,44 +678,6 @@ select:focus {
   margin-left: 20px;
 }
 
-/* SHOP PAGE
-.categories {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 20px;
-  padding-bottom: 20px;
-}
-
-#shop-main {
-  margin-top: 20px;
-}
-
-.filter {
-  margin: 10px;
-  border-bottom: 1px solid var(--textcolor);
-}
-
-@media only screen and (min-width: 700px) {
-  .categories {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  #shop-main {
-    display: grid;
-    grid-template-columns: 0.2fr 1fr;
-    margin-top: 50px;
-  }
-
-  .filter {
-    border-right: 1px solid var(--textcolor);
-    border-bottom: none !important;
-    margin: 20px;
-  }
-}
-
-*/
-
 /* search field */
 .search__container {
   margin: 20px;
@@ -721,9 +707,19 @@ select:focus {
   padding: 20px;
 }
 
-.om-mig-text h3,
-h2,
-p {
+.om-mig-text h2 {
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.om-mig-text h3 {
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.om-mig-text p {
   margin-top: 20px;
   padding-left: 10px;
   padding-right: 10px;
@@ -739,9 +735,15 @@ p {
   .speciale {
     margin: 50px;
   }
-  .om-mig-text h3,
-  h2,
-  p {
+  .om-mig-text h3 h2 p {
+    padding-left: none;
+    padding-right: none;
+  }
+  .om-mig-text h2 {
+    padding-left: none;
+    padding-right: none;
+  }
+  .om-mig-text p {
     padding-left: none;
     padding-right: none;
   }
@@ -760,4 +762,171 @@ p {
 .allan-om-mig-img {
   max-width: 100%;
   margin-top: 20px;
+}
+
+/* ------ KURV ------ */
+.kurv-main h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#shop-videre {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+  text-underline-offset: 7px;
+}
+
+#shop-videre:hover {
+  color: var(--purpleaccent);
+}
+
+#top-sektion-kurv {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--pinkaccent);
+}
+
+.produkt-styling-kurv {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  margin: 10px;
+  border-bottom: 2px solid var(--pinkaccent);
+}
+
+.produkt-img-kurv {
+  max-width: 20%;
+  border-radius: 16px;
+  margin: 10px;
+}
+
+#produkt-info-kurv {
+  margin: 10px;
+}
+
+.under-produkt-kurv {
+  margin: 10px;
+}
+
+.under-produkt-kurv button {
+  margin-top: 10px;
+}
+
+.kurv-main textarea {
+  font-family: "Ubuntu", sans-serif;
+  color: var(--textcolor);
+  width: 70%;
+  height: 100px;
+  background-color: var(--textfields);
+  border-radius: 8px;
+  border: 1px solid var(--textcolor);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  opacity: 70%;
+}
+
+@media only screen and (min-width: 1000px) {
+  #produkt-info-kurv h3 {
+    padding-bottom: 20px;
+  }
+  #produkt-info-kurv p {
+    padding-bottom: 20px;
+  }
+  .under-produkt-kurv {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .kurv-main textarea {
+    width: 500px;
+    height: 200px;
+  }
+  .under-produkt-kurv button {
+    margin-top: 150px;
+    margin-left: 200px;
+  }
+}
+
+.price-total {
+  color: var(--pricecolor);
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+#remove-from-kurv {
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  cursor: pointer;
+}
+
+#total-og-fjern {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 50px;
+}
+
+/* ----- LEVERING ---- */
+#ordre-total {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.breadcrumbs b {
+  color: var(--pinkaccent);
+}
+
+.breadcrumbs {
+  margin: 10px;
+}
+
+.levering-main form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  font-family: "Ubuntu", sans-serif;
+  color: var(--textcolor);
+  gap: 10px;
+}
+
+.levering-main input {
+  height: 35px;
+  background-color: var(--textfields);
+  border: 1px solid var(--textcolor);
+  border-radius: 4px;
+}
+
+.levering-main h2 {
+  margin: 10px;
+}
+
+.levering-knap {
+  margin: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#vælg-land {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  font-family: "Ubuntu", sans-serif;
+  color: var(--textcolor);
+  margin-top: 10px;
+}
+
+@media only screen and (min-width: 1000px) {
+  .levering-main {
+    max-width: 50%;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }

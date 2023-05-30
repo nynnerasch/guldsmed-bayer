@@ -26,7 +26,7 @@
               <a href="om.html" class="nav-link">Om mig</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link"
+              <a href="kurv.html" class="nav-link"
                 ><img src="assets/kurv.png" alt="kurv" class="kurv"
               /></a>
             </li>
@@ -40,6 +40,10 @@
       </header>
     </header>
     <main id="product-main">
+      <!-- <section id="added">
+        <h2>Godt valg! Produktet er blevet tilføjet til kurven.</h2>
+        <a href="kurv.html">Gå til kurven</a>
+      </section>-->
       <section class="product-page">
         <div id="img-section">
           <img
@@ -72,7 +76,7 @@
               <input type="text" id="antal" name="antal" value="1" />
               <span class="up" onClick="increaseCount(event, this)">+</span>
             </div>
-            <button>Tilføj til kurv</button>
+            <button onclick="vis()">Tilføj til kurv</button>
           </div>
         </div>
       </section>
