@@ -457,12 +457,23 @@ footer p {
   text-underline-offset: 7px;
 }
 */
+.gåtilbage {
+  margin-left: 42px;
+  margin-top: 10px;
+}
+
+.gåtilbage:hover {
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  color: var(--purpleaccent);
+}
 
 .product-img {
+  width: 80%;
   margin-right: auto;
   margin-left: auto;
   display: block;
-  margin-top: 50px;
+  margin-top: 20px;
   margin-bottom: 20px;
   border-radius: 8px;
 }
@@ -511,8 +522,13 @@ footer p {
 }
 
 @media only screen and (min-width: 1000px) {
+  .gåtilbage {
+    margin-left: 200px;
+    margin-top: 20px;
+  }
+
   .product-img {
-    width: 500px;
+    width: 70%;
   }
   .product-name,
   .product-price,
@@ -524,7 +540,7 @@ footer p {
     width: 70%;
   }
   .product-page {
-    margin: 50px;
+    margin: 20px;
   }
 }
 
