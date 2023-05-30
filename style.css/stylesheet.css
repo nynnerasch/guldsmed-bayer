@@ -107,6 +107,7 @@ button {
 button:hover {
   background-color: var(--purpleaccent);
   color: var(--background);
+  cursor: pointer;
 }
 
 /* HEADER */
@@ -837,6 +838,19 @@ select:focus {
   #produkt-info-kurv p {
     padding-bottom: 20px;
   }
+  .under-produkt-kurv {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .kurv-main textarea {
+    width: 500px;
+    height: 200px;
+  }
+  .under-produkt-kurv button {
+    margin-top: 150px;
+    margin-left: 200px;
+  }
 }
 
 .price-total {
@@ -856,4 +870,63 @@ select:focus {
   flex-direction: column;
   align-items: flex-end;
   gap: 50px;
+}
+
+/* ----- LEVERING ---- */
+#ordre-total {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.breadcrumbs b {
+  color: var(--pinkaccent);
+}
+
+.breadcrumbs {
+  margin: 10px;
+}
+
+.levering-main form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  font-family: "Ubuntu", sans-serif;
+  color: var(--textcolor);
+  gap: 10px;
+}
+
+.levering-main input {
+  height: 35px;
+  background-color: var(--textfields);
+  border: 1px solid var(--textcolor);
+  border-radius: 4px;
+}
+
+.levering-main h2 {
+  margin: 10px;
+}
+
+.levering-knap {
+  margin: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#vælg-land {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  font-family: "Ubuntu", sans-serif;
+  color: var(--textcolor);
+  margin-top: 10px;
+}
+
+@media only screen and (min-width: 1000px) {
+  .levering-main {
+    max-width: 50%;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
