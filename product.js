@@ -1,7 +1,7 @@
 /*DYNAMIC PRODUCT*/
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get("id");
-const url = `http://guldsmedbayer.josefinemoerchh.com/wp-json/wp/v2/smykke/${id}`;
+const url = `http://guldsmedbayer.josefinemoerchh.com/wp-json/wp/v2/smykke/${id}?_embedded`;
 console.log(urlParams.get("id"));
 console.log(url);
 
@@ -20,7 +20,8 @@ function showProduct(product) {
   document.querySelector("#product-text-section p").textContent =
     product.description;
   document.querySelector(".product-img").src =
-    product._links["wp:featuredmedia"][0].href;
+    //product._links["wp:featuredmedia"][0].href;
+    product.productimage.guid;
 }
 
 /* PRODUCT QUANTITY */

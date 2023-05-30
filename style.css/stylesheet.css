@@ -556,7 +556,7 @@ select:focus {
   margin-left: 10px;
 }
 
-/* SHOP PAGE */
+/* ------ SHOP PAGE ------  */
 .shop-page .price::after {
   content: ",00 DKK";
 }

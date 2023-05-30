@@ -56,6 +56,7 @@ function setupSmykker(smykkeArray) {
     );
     copy.querySelector("h3").textContent = `${smykke.title.rendered}`;
     copy.querySelector("h3.price").textContent = `${smykke.price}`;
+    copy.querySelector("a").href = `product.html?id=${smykke.id}`;
     parentElement.appendChild(copy);
   });
 }
