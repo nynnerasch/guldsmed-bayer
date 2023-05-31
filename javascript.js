@@ -20,7 +20,7 @@ function closeMenu() {
 }
 
 /* DESIGN DIT EGET SMYKKE FORM*/
-let sendButton = document.getElementById("send-button");
+let sendButton = document.getElementById("send-button-design");
 const form = document.getElementById("form");
 
 sendButton.addEventListener("click", function (e) {
