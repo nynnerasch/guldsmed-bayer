@@ -18,3 +18,25 @@ function closeMenu() {
   hamburger.classList.remove("active");
   navMenu.classList.remove("active");
 }
+
+/* DESIGN DIT EGET SMYKKE FORM*/
+let sendButton = document.getElementById("send-button");
+const form = document.getElementById("form");
+
+sendButton.addEventListener("click", function (e) {
+  e.preventDefault();
+  sendButton.value = "Send...";
+  const serviceID = "default_service";
+  const templateID = "template_wtrhctn";
+
+  emailjs.sendForm(serviceID, templateID, form).then(
+    () => {
+      sendButton.value = "Send Email";
+      alert("Sent!");
+    },
+    (err) => {
+      send.value = "Send Email";
+      alert(JSON.stringify(err));
+    }
+  );
+});

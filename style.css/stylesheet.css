@@ -953,3 +953,70 @@ OM MIG
     padding-bottom: 20px;
   }
 }
+
+/* DESIGN DIT EGET SMYKKE */
+
+.email-form-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10%;
+}
+
+.design-dit-eget-smykke {
+  margin: 5%;
+  margin-bottom: 0%;
+  margin-right: 0%;
+}
+
+.email-form-div {
+  grid-column-start: 1;
+}
+
+.design-own-main form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 600px;
+}
+
+.design-own-main form h3 {
+  color: var(--textcolor);
+  margin-bottom: 5%;
+}
+
+.design-own-main form input,
+.design-own-main form textarea {
+  border: 0;
+  margin: 10px 0;
+  padding: 2%;
+  outline: 1px solid var(--textcolor);
+  border-radius: 8px;
+  background: var(--background);
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+}
+
+/* a container */
+.responsive-two-column-grid {
+  display: block;
+}
+
+/* columns */
+.responsive-two-column-grid > * {
+  padding: 1rem;
+}
+
+/* tablet and above version */
+@media (min-width: 768px) {
+  .responsive-two-column-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-rows: min-content auto min-content;
+    padding: 8%;
+    padding-bottom: 0%;
+    padding-top: 5%;
+  }
+}
