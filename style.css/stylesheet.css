@@ -960,8 +960,8 @@ OM MIG
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
   margin-bottom: 10%;
+  margin-top: 20px;
 }
 
 .design-dit-eget-smykke {
@@ -993,7 +993,7 @@ OM MIG
   padding: 2%;
   outline: 1px solid var(--textcolor);
   border-radius: 8px;
-  background: var(--background);
+  background: var(--textfields);
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
 }
@@ -1008,15 +1008,37 @@ OM MIG
   padding: 1rem;
 }
 
+.img-design {
+  max-width: 90%;
+  margin: auto;
+}
+
+.image-section-design {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#send-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
 /* tablet and above version */
 @media (min-width: 768px) {
   .responsive-two-column-grid {
     display: grid;
+    grid-gap: 20px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-rows: min-content auto min-content;
     padding: 8%;
     padding-bottom: 0%;
     padding-top: 5%;
+  }
+
+  .img-design {
+    max-width: 90%;
   }
 }
