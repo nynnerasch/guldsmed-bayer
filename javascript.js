@@ -21,7 +21,7 @@ function closeMenu() {
 
 /* DESIGN DIT EGET SMYKKE FORM*/
 let sendButton = document.getElementById("send-button-design");
-const form = document.getElementById("form");
+const form = document.getElementById("contact-form");
 
 sendButton.addEventListener("click", function (e) {
   e.preventDefault();
